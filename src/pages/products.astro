@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Wave from "../components/Wave.astro";
+
+const filters = [
+  { key: "all", label: "All Products" },
+  { key: "preserved", label: "Preserved Fruits" },
+  { key: "biscuits", label: "Biscuits" },
+  { key: "sauces", label: "Sauces & Paste" },
+  { key: "beverage", label: "Beverages" },
+  { key: "ointment", label: "Oils & Ointments" },
+  { key: "other", label: "Other Products" },
+];
+
+const products = [
+  { cat: "preserved", name: "Preserved Nutmeg Liquorice, 180g", img: "/images/products/preserved-1.jpg" },
+  { cat: "preserved", name: "Preserved Nutmeg Sweetened, 350g", img: "/images/products/preserved-2.jpg" },
+  { cat: "preserved", name: "Preserved Nutmeg Sweetened, 150g", img: "/images/products/preserved-3.jpg" },
+  { cat: "preserved", name: "Preserved Nutmeg Sugar-Coated, 150g", img: "/images/products/preserved-4.jpg" },
+  { cat: "preserved", name: "Preserved Nutmeg Sweet & Salty, 150g", img: "/images/products/preserved-5.jpg" },
+  { cat: "preserved", name: "Nutmeg Delight (3 varieties), 200g", img: "/images/products/preserved-6.jpg" },
+  { cat: "preserved", name: "Preserved Limes, 120g", img: "/images/products/preserved-7.jpg" },
+  { cat: "preserved", name: "Preserved Mango, 200g", img: "/images/products/preserved-8.jpg" },
+  { cat: "biscuits", name: "Tau Sar Pneah, Original, 640g / 240g", img: "/images/products/biscuits-1.jpg" },
+  { cat: "biscuits", name: "Tau Sar Pneah, Pandan, 640g / 240g", img: "/images/products/biscuits-2.jpg" },
+  { cat: "biscuits", name: "Tau Sar Pneah, Coffee, 240g", img: "/images/products/biscuits-3.jpg" },
+  { cat: "biscuits", name: "Nutmeg Tau Sar Pneah, 240g", img: "/images/products/biscuits-4.jpg" },
+  { cat: "biscuits", name: "Brown Sugar Biscuits, 360g", img: "/images/products/biscuits-5.jpg" },
+  { cat: "biscuits", name: "Peanut Crisps, 200g", img: "/images/products/biscuits-6.jpg" },
+  { cat: "biscuits", name: "Pineapple Shortcake, 240g", img: "/images/products/biscuits-7.jpg" },
+  { cat: "biscuits", name: "Pong Pneah, 250g", img: "/images/products/biscuits-8.jpg" },
+  { cat: "sauces", name: "Prawn Paste (regular), 1kg / 180g", img: "/images/products/sauces-1.jpg" },
+  { cat: "sauces", name: "Rojak Sauce, 1kg / 420g / 180g", img: "/images/products/sauces-2.jpg" },
+  { cat: "sauces", name: "PUAS Rojak Sauce, 250g", img: "/images/products/sauces-3.jpg" },
+  { cat: "sauces", name: "EJ Belacan, 500g / 250g / 20g", img: "/images/products/sauces-4.jpg" },
+  { cat: "sauces", name: "Belacan Powder, 80g", img: "/images/products/sauces-5.jpg" },
+  { cat: "sauces", name: "Belacan Chilli Powder, 20g", img: "/images/products/sauces-6.jpg" },
+  { cat: "sauces", name: "Belacan Chilli Sauce, 190g", img: "/images/products/sauces-7.jpg" },
+  { cat: "sauces", name: "Asam Laksa Paste, 200g", img: "/images/products/sauces-8.jpg" },
+  { cat: "sauces", name: "All-purpose Seasoning Flour (Original), 1kg / 200g", img: "/images/products/sauces-9.jpg" },
+  { cat: "sauces", name: "All-purpose Seasoning Flour (New), 900g / 200g", img: "/images/products/sauces-10.jpg" },
+  { cat: "sauces", name: "Cucur Powder, 750g", img: "/images/products/sauces-11.jpg" },
+  { cat: "sauces", name: "Bakuteh, 50g / box (2×50g)", img: "/images/products/sauces-12.jpg" },
+  { cat: "sauces", name: "Sesame Oil, 630ml / 320ml / 140ml", img: "/images/products/sauces-13.jpg" },
+  { cat: "beverage", name: "Nutmeg Syrup, 500ml", img: "/images/products/beverage-1.jpg" },
+  { cat: "beverage", name: "Nutmeg Lime Syrup, 500ml", img: "/images/products/beverage-2.jpg" },
+  { cat: "beverage", name: "Nutmeg Sour Plum Syrup, 500ml", img: "/images/products/beverage-3.jpg" },
+  { cat: "beverage", name: "Nutmeg Drink, 300ml", img: "/images/products/beverage-4.jpg" },
+  { cat: "beverage", name: "Nutmeg Lime Drink, 300ml", img: "/images/products/beverage-5.jpg" },
+  { cat: "beverage", name: "Nutmeg Tea, 3g × 20", img: "/images/products/beverage-6.jpg" },
+  { cat: "beverage", name: "Classic Coffee 3-in-1, 30g × 15", img: "/images/products/beverage-7.jpg" },
+  { cat: "beverage", name: "No Sugar Added Coffee 2-in-1, 25g × 15", img: "/images/products/beverage-8.jpg" },
+  { cat: "beverage", name: "Nutmeg Coffee 3-in-1, 30g × 15", img: "/images/products/beverage-9.jpg" },
+  { cat: "ointment", name: "Nutmeg Mace Oil, 60ml / 28ml / 14ml", img: "/images/products/ointment-1.jpg" },
+  { cat: "ointment", name: "Nutmeg Medicated Oil, 60ml / 28ml / 14ml", img: "/images/products/ointment-2.jpg" },
+  { cat: "ointment", name: "Nutmeg Balm, 14g", img: "/images/products/ointment-3.jpg" },
+  { cat: "ointment", name: "Mosquito Repellent Balm, 12g", img: "/images/products/ointment-4.jpg" },
+  { cat: "ointment", name: "Mosquito Repellent Spray, 40ml", img: "/images/products/ointment-5.jpg" },
+  { cat: "ointment", name: "Mosquito Repellent Roll-on, 10ml", img: "/images/products/ointment-6.jpg" },
+  { cat: "other", name: "Face Powder, 190g / 100g", img: "/images/products/other-1.jpg" },
+  { cat: "other", name: "Dodol (Durian), 200g", img: "/images/products/other-2.jpg" },
+  { cat: "other", name: "Dodol (Coconut), 200g", img: "/images/products/other-3.jpg" },
+  { cat: "other", name: "Agar-Agar Strips, 50g / 37.5g / 20g", img: "/images/products/other-4.jpg" },
+  { cat: "other", name: "Glass Noodles (Soh Hoon), 100g", img: "/images/products/other-5.jpg" },
+];
+const labels: Record<string, string> = {
+  preserved: "Preserved Fruits", biscuits: "Biscuits", sauces: "Sauces & Paste",
+  beverage: "Beverages", ointment: "Oils & Ointments", other: "Other Products",
+};
+---
+
+<Layout path="/products" title="Products — Cheong Kim Chuan (C.K.C.) Penang Nutmeg House">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Our products</span>
+      <h1 class="page-title" data-reveal>Penang's nutmeg pantry, since 1937</h1>
+      <p class="page-lead" data-reveal>
+        From preserved nutmeg and Tau Sar Pneah to belacan, rojak sauce and medicated oils —
+        explore the full range of traditional flavours we still make the heritage way.
+      </p>
+    </div>
+  </section>
+
+  <section class="filter-sec">
+    <div class="container">
+      <div class="filter-bar" data-reveal role="tablist" aria-label="Filter products">
+        {filters.map((f, i) => (
+          <button class={`filter-btn${i === 0 ? " active" : ""}`} data-filter={f.key}>{f.label}</button>
+        ))}
+      </div>
+
+      <div class="prod-grid" id="prod-grid" data-reveal-group>
+        {products.map((p) => (
+          <article class="pcard" data-cat={p.cat}>
+            <div class="pcard-media">
+              <img src={p.img} alt={p.name} loading="lazy" width="320" height="352" />
+              <span class="pcard-tag">{labels[p.cat]}</span>
+            </div>
+            <div class="pcard-body">
+              <h3>{p.name}</h3>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="no-results" id="no-results" hidden>No products in this category.</p>
+    </div>
+  </section>
+
+  <section class="oem ribbon">
+    <Wave side="top" />
+    <Wave side="bottom" />
+    <div class="container ribbon-inner">
+      <div class="oem-box" data-reveal>
+        <div class="oem-copy">
+          <h2>Stock the heritage taste</h2>
+          <p>Wholesale, distribution and export enquiries welcome — bring the authentic flavours of Penang to your shelves, from a name trusted across Malaysia, Singapore and Hong Kong.</p>
+        </div>
+        <a href="/contact" class="btn btn-primary">Enquire now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { padding: 64px 0 36px; }
+  .page-title { font-size: clamp(2.4rem, 5.4vw, 3.8rem); margin: 18px 0 18px; letter-spacing: -0.04em; }
+  .page-lead { font-size: 1.12rem; color: var(--ink-soft); max-width: 640px; line-height: 1.65; }
+
+  .filter-sec { padding: 10px 0 0; }
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 38px; }
+  .filter-btn {
+    font-family: var(--font-body); font-weight: 600; font-size: .92rem; cursor: pointer;
+    padding: 10px 18px; border-radius: 999px; border: 1px solid var(--line-strong);
+    background: #fff; color: var(--ink-soft); transition: all .2s ease;
+  }
+  .filter-btn:hover { border-color: var(--gold); color: var(--ink); }
+  .filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+  .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+  .pcard { display: block; }
+  .pcard.is-hidden { display: none; }
+  .pcard-media {
+    position: relative; aspect-ratio: 1/1.05; overflow: hidden; border-radius: 22px; background: var(--cream);
+    box-shadow: 0 0 0 rgba(74,47,23,0);
+    transition: transform .4s cubic-bezier(.2,.8,.25,1), box-shadow .4s ease;
+  }
+  .pcard-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.25,1); }
+  .pcard-tag {
+    position: absolute; left: 12px; top: 12px; font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+    text-transform: uppercase; color: var(--navy); background: rgba(255,255,255,.9);
+    padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(4px);
+  }
+  .pcard:hover .pcard-media { transform: translateY(-10px); box-shadow: 0 24px 40px rgba(192,69,31,.18); }
+  .pcard:hover .pcard-media img { transform: scale(1.07); }
+  .pcard-body { padding: 16px 4px 0; }
+  .pcard-body h3 { font-size: .98rem; letter-spacing: -0.01em; line-height: 1.35; transition: color .25s ease; }
+  .pcard:hover .pcard-body h3 { color: var(--red); }
+  .no-results { text-align: center; color: var(--ink-soft); padding: 40px 0; font-weight: 600; }
+
+  .oem-box { display: flex; justify-content: space-between; align-items: center; gap: 36px; flex-wrap: wrap; }
+  .oem-box h2 { color: #fff; font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 12px; }
+  .oem-box p { color: rgba(255,255,255,.82); max-width: 520px; }
+  .oem-box .btn { flex-shrink: 0; }
+
+  @media (max-width: 900px) { .prod-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) {
+    .prod-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .oem-box { padding: 40px 30px; }
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
+  const cards = document.querySelectorAll<HTMLElement>(".pcard");
+  const noResults = document.getElementById("no-results");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.filter;
+      buttons.forEach((b) => b.classList.toggle("active", b === btn));
+      let shown = 0;
+      cards.forEach((c) => {
+        const match = key === "all" || c.dataset.cat === key;
+        c.classList.toggle("is-hidden", !match);
+        if (match) shown++;
+      });
+      if (noResults) noResults.hidden = shown !== 0;
+    });
+  });
+</script>
