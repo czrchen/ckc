@@ -4,12 +4,12 @@
    =========================================================== */
 
 :root {
-  /* Brand */
-  --navy:       #4A2F17;   /* deep nutmeg brown (dark sections) */
-  --navy-2:     #5E3D1F;
-  --red:        #C0451F;   /* heritage spice red accent */
-  --red-deep:   #A1391A;
-  --gold:       #F0B326;   /* CKC golden bell */
+  /* Brand — Lee Kum Kee red + CKC golden bell */
+  --navy:       #5A1418;   /* deep maroon (dark sections) */
+  --navy-2:     #771A1E;
+  --red:        #C8102E;   /* LKK red (primary) */
+  --red-deep:   #A50D26;
+  --gold:       #E8A92A;   /* CKC golden bell */
 
   /* Surface + text */
   --ink:        #2A2014;   /* warm near-black text */
