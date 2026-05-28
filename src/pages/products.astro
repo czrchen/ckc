@@ -12,55 +12,55 @@ const filters = [
 ];
 
 const products = [
-  { cat: "preserved", name: "Preserved Nutmeg Liquorice, 180g", img: "/images/products/preserved-1.jpg" },
-  { cat: "preserved", name: "Preserved Nutmeg Sweetened, 350g", img: "/images/products/preserved-2.jpg" },
-  { cat: "preserved", name: "Preserved Nutmeg Sweetened, 150g", img: "/images/products/preserved-3.jpg" },
-  { cat: "preserved", name: "Preserved Nutmeg Sugar-Coated, 150g", img: "/images/products/preserved-4.jpg" },
-  { cat: "preserved", name: "Preserved Nutmeg Sweet & Salty, 150g", img: "/images/products/preserved-5.jpg" },
-  { cat: "preserved", name: "Nutmeg Delight (3 varieties), 200g", img: "/images/products/preserved-6.jpg" },
-  { cat: "preserved", name: "Preserved Limes, 120g", img: "/images/products/preserved-7.jpg" },
-  { cat: "preserved", name: "Preserved Mango, 200g", img: "/images/products/preserved-8.jpg" },
-  { cat: "biscuits", name: "Tau Sar Pneah, Original, 640g / 240g", img: "/images/products/biscuits-1.jpg" },
-  { cat: "biscuits", name: "Tau Sar Pneah, Pandan, 640g / 240g", img: "/images/products/biscuits-2.jpg" },
-  { cat: "biscuits", name: "Tau Sar Pneah, Coffee, 240g", img: "/images/products/biscuits-3.jpg" },
-  { cat: "biscuits", name: "Nutmeg Tau Sar Pneah, 240g", img: "/images/products/biscuits-4.jpg" },
-  { cat: "biscuits", name: "Brown Sugar Biscuits, 360g", img: "/images/products/biscuits-5.jpg" },
-  { cat: "biscuits", name: "Peanut Crisps, 200g", img: "/images/products/biscuits-6.jpg" },
-  { cat: "biscuits", name: "Pineapple Shortcake, 240g", img: "/images/products/biscuits-7.jpg" },
-  { cat: "biscuits", name: "Pong Pneah, 250g", img: "/images/products/biscuits-8.jpg" },
-  { cat: "sauces", name: "Prawn Paste (regular), 1kg / 180g", img: "/images/products/sauces-1.jpg" },
-  { cat: "sauces", name: "Rojak Sauce, 1kg / 420g / 180g", img: "/images/products/sauces-2.jpg" },
-  { cat: "sauces", name: "PUAS Rojak Sauce, 250g", img: "/images/products/sauces-3.jpg" },
-  { cat: "sauces", name: "EJ Belacan, 500g / 250g / 20g", img: "/images/products/sauces-4.jpg" },
-  { cat: "sauces", name: "Belacan Powder, 80g", img: "/images/products/sauces-5.jpg" },
-  { cat: "sauces", name: "Belacan Chilli Powder, 20g", img: "/images/products/sauces-6.jpg" },
-  { cat: "sauces", name: "Belacan Chilli Sauce, 190g", img: "/images/products/sauces-7.jpg" },
-  { cat: "sauces", name: "Asam Laksa Paste, 200g", img: "/images/products/sauces-8.jpg" },
-  { cat: "sauces", name: "All-purpose Seasoning Flour (Original), 1kg / 200g", img: "/images/products/sauces-9.jpg" },
-  { cat: "sauces", name: "All-purpose Seasoning Flour (New), 900g / 200g", img: "/images/products/sauces-10.jpg" },
-  { cat: "sauces", name: "Cucur Powder, 750g", img: "/images/products/sauces-11.jpg" },
-  { cat: "sauces", name: "Bakuteh, 50g / box (2×50g)", img: "/images/products/sauces-12.jpg" },
-  { cat: "sauces", name: "Sesame Oil, 630ml / 320ml / 140ml", img: "/images/products/sauces-13.jpg" },
-  { cat: "beverage", name: "Nutmeg Syrup, 500ml", img: "/images/products/beverage-1.jpg" },
-  { cat: "beverage", name: "Nutmeg Lime Syrup, 500ml", img: "/images/products/beverage-2.jpg" },
-  { cat: "beverage", name: "Nutmeg Sour Plum Syrup, 500ml", img: "/images/products/beverage-3.jpg" },
-  { cat: "beverage", name: "Nutmeg Drink, 300ml", img: "/images/products/beverage-4.jpg" },
-  { cat: "beverage", name: "Nutmeg Lime Drink, 300ml", img: "/images/products/beverage-5.jpg" },
-  { cat: "beverage", name: "Nutmeg Tea, 3g × 20", img: "/images/products/beverage-6.jpg" },
-  { cat: "beverage", name: "Classic Coffee 3-in-1, 30g × 15", img: "/images/products/beverage-7.jpg" },
-  { cat: "beverage", name: "No Sugar Added Coffee 2-in-1, 25g × 15", img: "/images/products/beverage-8.jpg" },
-  { cat: "beverage", name: "Nutmeg Coffee 3-in-1, 30g × 15", img: "/images/products/beverage-9.jpg" },
-  { cat: "ointment", name: "Nutmeg Mace Oil, 60ml / 28ml / 14ml", img: "/images/products/ointment-1.jpg" },
-  { cat: "ointment", name: "Nutmeg Medicated Oil, 60ml / 28ml / 14ml", img: "/images/products/ointment-2.jpg" },
-  { cat: "ointment", name: "Nutmeg Balm, 14g", img: "/images/products/ointment-3.jpg" },
-  { cat: "ointment", name: "Mosquito Repellent Balm, 12g", img: "/images/products/ointment-4.jpg" },
-  { cat: "ointment", name: "Mosquito Repellent Spray, 40ml", img: "/images/products/ointment-5.jpg" },
-  { cat: "ointment", name: "Mosquito Repellent Roll-on, 10ml", img: "/images/products/ointment-6.jpg" },
-  { cat: "other", name: "Face Powder, 190g / 100g", img: "/images/products/other-1.jpg" },
-  { cat: "other", name: "Dodol (Durian), 200g", img: "/images/products/other-2.jpg" },
-  { cat: "other", name: "Dodol (Coconut), 200g", img: "/images/products/other-3.jpg" },
-  { cat: "other", name: "Agar-Agar Strips, 50g / 37.5g / 20g", img: "/images/products/other-4.jpg" },
-  { cat: "other", name: "Glass Noodles (Soh Hoon), 100g", img: "/images/products/other-5.jpg" },
+  { cat: "preserved", name: "Preserved Nutmeg Liquorice, 180g", img: "/images/products/preserved-1.jpg", desc: "Tangy preserved nutmeg with liquorice." },
+  { cat: "preserved", name: "Preserved Nutmeg Sweetened, 350g", img: "/images/products/preserved-2.jpg", desc: "Sweetened preserved nutmeg, family size." },
+  { cat: "preserved", name: "Preserved Nutmeg Sweetened, 150g", img: "/images/products/preserved-3.jpg", desc: "Sweet preserved nutmeg in a handy pack." },
+  { cat: "preserved", name: "Preserved Nutmeg Sugar-Coated, 150g", img: "/images/products/preserved-4.jpg", desc: "Sugar-coated nutmeg — a chewy treat." },
+  { cat: "preserved", name: "Preserved Nutmeg Sweet & Salty, 150g", img: "/images/products/preserved-5.jpg", desc: "Sweet-and-salty preserved nutmeg." },
+  { cat: "preserved", name: "Nutmeg Delight (3 varieties), 200g", img: "/images/products/preserved-6.jpg", desc: "An assortment of three preserved nutmegs." },
+  { cat: "preserved", name: "Preserved Limes, 120g", img: "/images/products/preserved-7.jpg", desc: "Tangy dried preserved limes." },
+  { cat: "preserved", name: "Preserved Mango, 200g", img: "/images/products/preserved-8.jpg", desc: "Sweet-sour preserved mango slices." },
+  { cat: "biscuits", name: "Tau Sar Pneah, Original, 640g / 240g", img: "/images/products/biscuits-1.jpg", desc: "Penang's famous flaky green-bean pastry." },
+  { cat: "biscuits", name: "Tau Sar Pneah, Pandan, 640g / 240g", img: "/images/products/biscuits-2.jpg", desc: "Tau sar pneah with fragrant pandan." },
+  { cat: "biscuits", name: "Tau Sar Pneah, Coffee, 240g", img: "/images/products/biscuits-3.jpg", desc: "Coffee-flavoured tau sar pneah." },
+  { cat: "biscuits", name: "Nutmeg Tau Sar Pneah, 240g", img: "/images/products/biscuits-4.jpg", desc: "Tau sar pneah with a nutmeg twist." },
+  { cat: "biscuits", name: "Brown Sugar Biscuits, 360g", img: "/images/products/biscuits-5.jpg", desc: "Crisp biscuits rich with brown sugar." },
+  { cat: "biscuits", name: "Peanut Crisps, 200g", img: "/images/products/biscuits-6.jpg", desc: "Crunchy, moreish peanut crisps." },
+  { cat: "biscuits", name: "Pineapple Shortcake, 240g", img: "/images/products/biscuits-7.jpg", desc: "Buttery shortcake with pineapple jam." },
+  { cat: "biscuits", name: "Pong Pneah, 250g", img: "/images/products/biscuits-8.jpg", desc: "Light, flaky Penang pong pneah." },
+  { cat: "sauces", name: "Prawn Paste (regular), 1kg / 180g", img: "/images/products/sauces-1.jpg", desc: "Savoury Penang prawn paste (hae ko)." },
+  { cat: "sauces", name: "Rojak Sauce, 1kg / 420g / 180g", img: "/images/products/sauces-2.jpg", desc: "Classic thick, fragrant Penang rojak sauce." },
+  { cat: "sauces", name: "PUAS Rojak Sauce, 250g", img: "/images/products/sauces-3.jpg", desc: "Ready-to-use rojak sauce, big flavour." },
+  { cat: "sauces", name: "EJ Belacan, 500g / 250g / 20g", img: "/images/products/sauces-4.jpg", desc: "Aromatic Penang shrimp paste." },
+  { cat: "sauces", name: "Belacan Powder, 80g", img: "/images/products/sauces-5.jpg", desc: "Convenient powdered belacan." },
+  { cat: "sauces", name: "Belacan Chilli Powder, 20g", img: "/images/products/sauces-6.jpg", desc: "Spicy belacan-chilli seasoning." },
+  { cat: "sauces", name: "Belacan Chilli Sauce, 190g", img: "/images/products/sauces-7.jpg", desc: "Punchy belacan chilli sauce." },
+  { cat: "sauces", name: "Asam Laksa Paste, 200g", img: "/images/products/sauces-8.jpg", desc: "Tangy paste for instant asam laksa." },
+  { cat: "sauces", name: "All-purpose Seasoning Flour (Original), 1kg / 200g", img: "/images/products/sauces-9.jpg", desc: "Crispy frying flour, original blend." },
+  { cat: "sauces", name: "All-purpose Seasoning Flour (New), 900g / 200g", img: "/images/products/sauces-10.jpg", desc: "Improved crispy seasoning flour." },
+  { cat: "sauces", name: "Cucur Powder, 750g", img: "/images/products/sauces-11.jpg", desc: "Mix for fluffy Malaysian fritters." },
+  { cat: "sauces", name: "Bakuteh, 50g / box (2×50g)", img: "/images/products/sauces-12.jpg", desc: "Herbal bak kut teh soup spice." },
+  { cat: "sauces", name: "Sesame Oil, 630ml / 320ml / 140ml", img: "/images/products/sauces-13.jpg", desc: "Fragrant pure sesame oil." },
+  { cat: "beverage", name: "Nutmeg Syrup, 500ml", img: "/images/products/beverage-1.jpg", desc: "Penang nutmeg cordial — just dilute." },
+  { cat: "beverage", name: "Nutmeg Lime Syrup, 500ml", img: "/images/products/beverage-2.jpg", desc: "Nutmeg cordial with a lime lift." },
+  { cat: "beverage", name: "Nutmeg Sour Plum Syrup, 500ml", img: "/images/products/beverage-3.jpg", desc: "Nutmeg syrup with tangy sour plum." },
+  { cat: "beverage", name: "Nutmeg Drink, 300ml", img: "/images/products/beverage-4.jpg", desc: "Ready-to-drink chilled nutmeg." },
+  { cat: "beverage", name: "Nutmeg Lime Drink, 300ml", img: "/images/products/beverage-5.jpg", desc: "Refreshing nutmeg-lime drink." },
+  { cat: "beverage", name: "Nutmeg Tea, 3g × 20", img: "/images/products/beverage-6.jpg", desc: "Soothing nutmeg tea bags." },
+  { cat: "beverage", name: "Classic Coffee 3-in-1, 30g × 15", img: "/images/products/beverage-7.jpg", desc: "Smooth 3-in-1 instant coffee." },
+  { cat: "beverage", name: "No Sugar Added Coffee 2-in-1, 25g × 15", img: "/images/products/beverage-8.jpg", desc: "2-in-1 coffee with no added sugar." },
+  { cat: "beverage", name: "Nutmeg Coffee 3-in-1, 30g × 15", img: "/images/products/beverage-9.jpg", desc: "Instant coffee with a hint of nutmeg." },
+  { cat: "ointment", name: "Nutmeg Mace Oil, 60ml / 28ml / 14ml", img: "/images/products/ointment-1.jpg", desc: "Traditional nutmeg-mace massage oil." },
+  { cat: "ointment", name: "Nutmeg Medicated Oil, 60ml / 28ml / 14ml", img: "/images/products/ointment-2.jpg", desc: "Warming medicated nutmeg oil." },
+  { cat: "ointment", name: "Nutmeg Balm, 14g", img: "/images/products/ointment-3.jpg", desc: "Soothing nutmeg balm for aches." },
+  { cat: "ointment", name: "Mosquito Repellent Balm, 12g", img: "/images/products/ointment-4.jpg", desc: "Balm that soothes and repels insects." },
+  { cat: "ointment", name: "Mosquito Repellent Spray, 40ml", img: "/images/products/ointment-5.jpg", desc: "On-the-go insect repellent spray." },
+  { cat: "ointment", name: "Mosquito Repellent Roll-on, 10ml", img: "/images/products/ointment-6.jpg", desc: "Easy roll-on insect protection." },
+  { cat: "other", name: "Face Powder, 190g / 100g", img: "/images/products/other-1.jpg", desc: "Classic cooling face powder." },
+  { cat: "other", name: "Dodol (Durian), 200g", img: "/images/products/other-2.jpg", desc: "Rich durian dodol, chewy and sweet." },
+  { cat: "other", name: "Dodol (Coconut), 200g", img: "/images/products/other-3.jpg", desc: "Traditional coconut dodol." },
+  { cat: "other", name: "Agar-Agar Strips, 50g / 37.5g / 20g", img: "/images/products/other-4.jpg", desc: "Plant-based agar-agar for jellies." },
+  { cat: "other", name: "Glass Noodles (Soh Hoon), 100g", img: "/images/products/other-5.jpg", desc: "Fine glass noodles for soups." },
 ];
 const labels: Record<string, string> = {
   preserved: "Preserved Fruits", biscuits: "Biscuits", sauces: "Sauces & Paste",
@@ -90,13 +90,19 @@ const labels: Record<string, string> = {
 
       <div class="prod-grid" id="prod-grid" data-reveal-group>
         {products.map((p) => (
-          <article class="pcard" data-cat={p.cat}>
-            <div class="pcard-media">
-              <img src={p.img} alt={p.name} loading="lazy" width="320" height="352" />
-              <span class="pcard-tag">{labels[p.cat]}</span>
-            </div>
-            <div class="pcard-body">
-              <h3>{p.name}</h3>
+          <article class="pcard" data-cat={p.cat} tabindex="0">
+            <div class="pcard-flip">
+              <div class="pcard-face pcard-front">
+                <div class="pcard-media"><img src={p.img} alt={p.name} loading="lazy" width="320" height="352" /><span class="pcard-tag">{labels[p.cat]}</span></div>
+                <h3>{p.name}</h3>
+                <span class="flip-hint">Hover for details ↻</span>
+              </div>
+              <div class="pcard-face pcard-back">
+                <span class="back-cat">{labels[p.cat]}</span>
+                <h3>{p.name}</h3>
+                <p>{p.desc}</p>
+                <span class="flip-hint light">↩ flip back</span>
+              </div>
             </div>
           </article>
         ))}
@@ -122,24 +128,25 @@ const labels: Record<string, string> = {
   .filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
 
   .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-  .pcard { display: block; }
+  .pcard { perspective: 1300px; outline: none; cursor: pointer; }
   .pcard.is-hidden { display: none; }
-  .pcard-media {
-    position: relative; aspect-ratio: 1/1.05; overflow: hidden; border-radius: 22px; background: var(--cream);
-    box-shadow: 0 0 0 rgba(74,47,23,0);
-    transition: transform .4s cubic-bezier(.2,.8,.25,1), box-shadow .4s ease;
-  }
-  .pcard-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.25,1); }
-  .pcard-tag {
-    position: absolute; left: 12px; top: 12px; font-size: .68rem; font-weight: 700; letter-spacing: .04em;
-    text-transform: uppercase; color: var(--navy); background: rgba(255,255,255,.9);
-    padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(4px);
-  }
-  .pcard:hover .pcard-media { transform: translateY(-10px); box-shadow: 0 24px 40px rgba(192,69,31,.18); }
-  .pcard:hover .pcard-media img { transform: scale(1.07); }
-  .pcard-body { padding: 16px 4px 0; }
-  .pcard-body h3 { font-size: .98rem; letter-spacing: -0.01em; line-height: 1.35; transition: color .25s ease; }
-  .pcard:hover .pcard-body h3 { color: var(--red); }
+  .pcard-flip { position: relative; width: 100%; height: 360px; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.8,.25,1); }
+  .pcard:hover .pcard-flip, .pcard:focus-within .pcard-flip { transform: rotateY(180deg); }
+  .pcard-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; }
+  .pcard-front { background: #fff; border: 1px solid var(--line); padding: 14px; }
+  .pcard-front .pcard-media { flex: 1; min-height: 0; position: relative; background: #fff; border-radius: 16px; overflow: hidden; }
+  .pcard-front .pcard-media img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+  .pcard-ph { width: 100%; height: 100%; display: grid; place-items: center; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--red), var(--navy)); }
+  .pcard-ph span { color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1rem; opacity: .95; }
+  .pcard-tag { position: absolute; left: 10px; top: 10px; font-size: .66rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--red-deep); background: var(--cream); padding: 5px 10px; border-radius: 999px; z-index: 1; }
+  .pcard-front h3 { font-size: .98rem; line-height: 1.35; margin-top: 12px; }
+  .flip-hint { font-size: .66rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
+  .flip-hint.light { color: rgba(255,255,255,.7); margin-top: 14px; }
+  .pcard-back { background: var(--navy); color: #fff; transform: rotateY(180deg); border-top: 4px solid var(--red); padding: 26px 22px; justify-content: center; }
+  .back-cat { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .pcard-back h3 { color: #fff; font-size: 1.2rem; line-height: 1.25; margin: 0 0 10px; }
+  .pcard-back p { color: rgba(255,255,255,.84); font-size: .92rem; line-height: 1.5; }
+  @media (prefers-reduced-motion: reduce) { .pcard-flip { transition: none; } }
   .no-results { text-align: center; color: var(--ink-soft); padding: 40px 0; font-weight: 600; }
 
   .oem-box { display: flex; justify-content: space-between; align-items: center; gap: 36px; flex-wrap: wrap; }
