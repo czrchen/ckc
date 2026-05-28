@@ -7,6 +7,8 @@ const featured = [
   { img: "/images/products/preserved-2.jpg", name: "Preserved Nutmeg Sweetened", cat: "Preserved Fruits" },
   { img: "/images/products/ointment-2.jpg", name: "Nutmeg Medicated Oil", cat: "Oils & Ointments" },
   { img: "/images/products/sauces-2.jpg", name: "Penang Rojak Sauce", cat: "Sauces & Paste" },
+  { img: "/images/products/biscuits-2.jpg", name: "Tau Sar Pneah (Pandan)", cat: "Biscuits" },
+  { img: "/images/products/preserved-1.jpg", name: "Preserved Nutmeg Liquorice", cat: "Preserved Fruits" },
 ];
 
 const certs = [
@@ -29,7 +31,7 @@ const heritage = [
     <div class="container hero-grid">
       <div class="hero-copy" data-hero-stagger>
         <span class="eyebrow">Penang Heritage · Est. 1937</span>
-        <h1>The taste of Penang, <span class="accent">since 1937</span>.</h1>
+        <h1 data-split>The taste of Penang, since 1937.</h1>
         <p class="hero-lead">
           Cheong Kim Chuan is Penang's house of nutmeg — preserved fruits, Tau Sar Pneah,
           belacan, rojak sauce and traditional medicated oils, still made the heritage way
@@ -117,16 +119,24 @@ const heritage = [
         </a>
       </header>
 
-      <div class="prod-grid" data-reveal-group>
-        {featured.map((p) => (
-          <a href="/products" class="prod-card">
-            <div class="prod-media"><img src={p.img} alt={p.name} loading="lazy" /></div>
-            <div class="prod-info">
+    </div>
+
+    <div class="pin-wrap" data-pin-wrap>
+      <div class="pin-track" data-pin-track>
+        {featured.map((p, i) => (
+          <a href="/products" class="pin-card">
+            <span class="pin-index">{String(i + 1).padStart(2, "0")}</span>
+            <div class="pin-media"><img src={p.img} alt={p.name} loading="lazy" /></div>
+            <div class="pin-info">
               <span class="prod-cat">{p.cat}</span>
               <h3>{p.name}</h3>
             </div>
           </a>
         ))}
+        <a href="/products" class="pin-card pin-card-cta">
+          <span>See all<br>products</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -147,7 +157,7 @@ const heritage = [
         <span class="eyebrow">Why Cheong Kim Chuan</span>
         <h2 class="section-title">A trusted name, built one batch at a time</h2>
         <p class="section-lead">Since 1937 the golden bell has stood for quality and the satisfaction of every customer — the same care, recipe after recipe, generation after generation.</p>
-        <ul class="quality-list">
+        <ul class="quality-list" data-scrub>
           {heritage.map((q) => (
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>
@@ -173,23 +183,6 @@ const heritage = [
             <div class="cert-plate"><img src={c.img} alt={c.name} loading="lazy" /></div>
           ))}
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CTA ============ -->
-  <section class="cta ribbon">
-    <Wave side="top" />
-    <Wave side="bottom" />
-    <div class="container ribbon-inner">
-      <div class="cta-box" data-reveal>
-        <div class="cta-copy">
-          <h2>Bring Penang's heritage taste to your shelves.</h2>
-          <p>Wholesale, distribution and export enquiries welcome — let's talk about stocking Cheong Kim Chuan.</p>
-        </div>
-        <a href="/contact" class="btn btn-primary">Get in touch
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
       </div>
     </div>
   </section>
@@ -375,5 +368,34 @@ const heritage = [
     .brand-card { grid-template-columns: 1fr; }
     .brand-media img { min-height: 200px; }
     .prod-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  }
+  /* ---------- FEATURED — pinned horizontal strip ---------- */
+  .pin-wrap { height: min(72vh, 560px); display: flex; align-items: stretch; overflow: hidden; }
+  .pin-track { display: flex; align-items: stretch; gap: 30px; padding: 0 max(28px, calc((100vw - var(--maxw)) / 2 + 28px)); will-change: transform; }
+  .pin-card {
+    flex: 0 0 auto; width: 330px; position: relative;
+    display: flex; flex-direction: column;
+    background: var(--white, #fff); border: 1px solid var(--line); border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm); padding: 26px 28px 24px; overflow: hidden;
+    transition: box-shadow .4s ease, border-color .4s ease;
+  }
+  .pin-card:hover { box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+  .pin-index { font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--line-strong); }
+  .pin-media { flex: 1; min-height: 0; background: var(--cream); border-radius: 18px; margin: 12px 0 18px; overflow: hidden; }
+  .pin-media img { width: 100%; height: 100%; object-fit: contain; padding: 22px; transition: transform .6s cubic-bezier(.2,.8,.25,1); }
+  .pin-card:hover .pin-media img { transform: scale(1.07); }
+  .pin-info .prod-cat { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--red); }
+  .pin-info h3 { font-size: 1.3rem; margin-top: 6px; letter-spacing: -0.02em; }
+  .pin-card-cta {
+    width: 250px; background: var(--navy); color: #fff; display: flex; flex-direction: column;
+    justify-content: center; gap: 16px;
+  }
+  .pin-card-cta span { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.1; }
+  .pin-card-cta svg { width: 26px; height: 26px; color: var(--gold); }
+  .pin-card-cta:hover { background: var(--navy-2); }
+  @media (max-width: 760px) {
+    .pin-wrap { height: auto; overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 6px 0 20px; scroll-snap-type: x mandatory; }
+    .pin-track { padding: 0 20px; }
+    .pin-card { width: 78vw; max-width: 320px; scroll-snap-align: center; }
   }
 </style>

@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Wave from "../components/Wave.astro";
 
 const filters = [
   { key: "all", label: "All Products" },
@@ -73,7 +72,7 @@ const labels: Record<string, string> = {
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow" data-reveal>Our products</span>
-      <h1 class="page-title" data-reveal>Penang's nutmeg pantry, since 1937</h1>
+      <h1 class="page-title" data-split>Penang's nutmeg pantry, since 1937</h1>
       <p class="page-lead" data-reveal>
         From preserved nutmeg and Tau Sar Pneah to belacan, rojak sauce and medicated oils —
         explore the full range of traditional flavours we still make the heritage way.
@@ -103,22 +102,6 @@ const labels: Record<string, string> = {
         ))}
       </div>
       <p class="no-results" id="no-results" hidden>No products in this category.</p>
-    </div>
-  </section>
-
-  <section class="oem ribbon">
-    <Wave side="top" />
-    <Wave side="bottom" />
-    <div class="container ribbon-inner">
-      <div class="oem-box" data-reveal>
-        <div class="oem-copy">
-          <h2>Stock the heritage taste</h2>
-          <p>Wholesale, distribution and export enquiries welcome — bring the authentic flavours of Penang to your shelves, from a name trusted across Malaysia, Singapore and Hong Kong.</p>
-        </div>
-        <a href="/contact" class="btn btn-primary">Enquire now
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
     </div>
   </section>
 </Layout>
