@@ -1,18 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
 ---
 
 <Layout path="/products" title="Products — Cheong Kim Chuan (C.K.C.) Penang Nutmeg House">
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow" data-reveal>Our products</span>
-      <h1 class="page-title" data-split>Penang's nutmeg pantry, since 1937</h1>
-      <p class="page-lead" data-reveal>
-        From preserved nutmeg and Tau Sar Pneah to belacan, rojak sauce and medicated oils —
-        explore the full range of traditional flavours we still make the heritage way.
-      </p>
-    </div>
-  </section>
+  <PageHeader eyebrow={"Our products"} title={"Penang's nutmeg pantry, since 1937"} subtitle={"From preserved nutmeg and Tau Sar Pneah to belacan, rojak sauce and medicated oils \u2014 explore the full range of traditional flavours we still make the heritage way."} />
 
   <section class="cat" style="--c:var(--red)">
     <div class="container">
@@ -824,10 +816,8 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  .page-hero { padding: 140px 0 50px; }
-  .page-title { font-size: clamp(2.6rem, 6vw, 4.2rem); margin: 18px 0 18px; letter-spacing: -0.04em; }
-  .page-lead { font-size: 1.12rem; color: var(--ink-soft); max-width: 600px; line-height: 1.65; }
   .cat { padding: 50px 0 0; }
+  .cat:first-of-type { padding-top: 70px; }
   .cat:last-of-type { padding-bottom: 100px; }
   .cat-head { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
   .cat-bar { width: 32px; height: 6px; border-radius: 6px; background: var(--c); }
